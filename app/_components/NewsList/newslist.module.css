@@ -1,0 +1,42 @@
+.list { /*Newsのリストの項目の部分*/
+  border-bottom: 1px solid var(--color-border-light);
+}
+.list:last-child { /*そのリスト項目の内容の画像と用語とその説明の2つからなるdivという子要素の部分*/
+  border-bottom: none;
+}
+.link { /*画像と用語とその説明から成るdivの部分*/
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 24px 0;
+}
+.image { /*News項目の画像*/
+  width: 200px;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+.title { /*News項目のニュースタイトル*/
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.meta { /*新規か更新かと日付の部分*/
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+@media (max-width: 640px) {
+    .link { /*画像と用語とその説明から成るdivの部分*/
+        display: block;
+        padding: 16px 0;
+    }
+    .image { /*News項目の画像*/
+        display: none;
+    }
+    .title { /*News項目のニュースタイトル*/
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 0.4rem;
+    }
+}
+

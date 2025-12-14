@@ -1,0 +1,26 @@
+.footer { /*フッター全体部分、つまりフッターのレイアウト担当*/
+    padding: 16px 24px;
+    text-align: center;
+    color: var(--color-text-sub);
+    font-size: 0.8rem;
+    margin-top: 80px;
+}
+.nav { /*3つのリンク先をつかさどる部分のレイアウト担当*/
+    margin-bottom: 16px;
+}
+.items { /*３つのリンクのリスト部分*/
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+@media (max-width: 640px) {
+    .items {
+        flex-wrap: wrap;
+        gap: 8px 0;
+    }
+    .item { /*３つのリンクのそれぞれの要素たる見えない項目ボタンとそのリンク２つのレイアウト担当*/
+        width: 50%;
+    }
+}
