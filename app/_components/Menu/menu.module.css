@@ -1,0 +1,47 @@
+.nav { /*ナビゲーションメニューとして、３つのハンバーガーメニューを開くと出てくるリスト項目全体のレイアウト担当*/
+
+}
+.items { /*３つのメニュー項目リスト全体のレイアウト設定*/
+
+    /*３つのリストは横並び、文字色は白、間に４０開ける*/
+    display: flex;
+    color: #fff;
+    gap: 40px;
+}
+.button { /*ハンバーガーメニューのスタイル担当*/
+    display: none;
+}
+@media (max-width: 640px) {
+    .nav { /*ナビゲーションメニューとして、３つのハンバーガーメニューを開くと出てくるリスト項目全体のレイアウト担当*/
+        display: none;
+    }
+    .nav.open { /*ハンバーガーメニューを開くと出る画面のレイアウト担当*/
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        color: var(--color-text-unpainted);
+        padding: 150px 50px;
+    }
+    .items { /*３つのメニュー項目リスト全体のレイアウト設定*/
+        flex-direction: column;
+        gap: 50px;
+    }
+    .button { /*ハンバーガーメニューのスタイル担当*/
+        display: flex;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    .button.close { /*クローズボタンが押された時のスタイル担当*/
+        position: absolute;
+        top: 24px;
+        right: 16px;
+    }
+}
+
+    

@@ -1,0 +1,33 @@
+.container { /*メンバーページ全体のレイアウト担当*/
+    background-color: darkblue;
+    color: white;
+    margin: 20px;
+}
+.empty { /*メンバーリストが空だった時の未登録という警告文のスタイル担当*/
+    text-align: center;
+    margin-bottom: 40px;
+}
+.list { /*メンバーリストの項目、画像と紹介文から成る項目のレイアウト担当*/
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+.list:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.image { /*メンバーリストのメンバーの写真のスタイル担当*/
+    width: 240px;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+.name { /*メンバーリストのメンバーの名前のスタイル担当*/
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.position { /*メンバーリストのメンバーの役職のスタイル担当*/
+    margin-bottom: 8px;
+}
+.profile { /*メンバーリストのメンバーの経歴のスタイル担当*/
+    font-size: 0.9rem;
+}

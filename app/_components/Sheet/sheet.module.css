@@ -1,0 +1,10 @@
+.container { /*引数で渡されたReactNodeを他のモジュールに埋め込む部分のレイアウト担当*/
+    position: relative;
+    background-color: darkorange;
+    width: 840px;
+    margin: -40px auto 0;
+    padding: 80px;
+    border-radius: 8px;
+}
+/*このSheetでくくった要素を横幅８４０でこれを張り付ける親要素の下限にかぶさる形で出っ張る。
+上下左右８０の緩衝材を配置*/
