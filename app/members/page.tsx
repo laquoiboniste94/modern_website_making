@@ -1,7 +1,9 @@
 import styles from '../members/page.module.css';
 import Image from 'next/image';
+import { getMembersList } from '../_libs/microcms';
+import { MEMBERS_LIST_LIMIT } from '../_constants';
 
-const data = {
+/*const data = {
     contents: [
         {
             id: "1",
@@ -43,9 +45,11 @@ const data = {
                     "最新の技術トレンドに精通し、当社の製品ポートフォリオを革新的かつ競争力のあるものにするためにリサーチと開発をリードしている。",
         },
     ],
-};
+};*/
 
-export default function Page() {
+export default async function Page() {
+    const data = await getMembersList({ limit: MEMBERS_LIST_LIMIT });
+
     return (
         <div className={styles.container}>
            {data.contents.length === 0 ? (
