@@ -22,13 +22,13 @@ export default function Menu() {
             <nav className={cn(styles.nav, { [styles.open]: isOpen })}>
                 <ul className={styles.items}>
                     <li>
-                        <Link href="./news">ニュース一覧</Link>
+                        <Link href="/news">ニュース一覧</Link>
                     </li>
                     <li>
-                        <Link href="./members">当社メンバー紹介</Link>
+                        <Link href="/members">当社メンバー紹介</Link>
                     </li>
                     <li>
-                        <Link href="./contact">お問い合わせ</Link>
+                        <Link href="/contact">お問い合わせ</Link>
                     </li>
                 </ul>
                 <button className={cn(styles.button, { [styles.close]: !isOpen })} onClick={close}>

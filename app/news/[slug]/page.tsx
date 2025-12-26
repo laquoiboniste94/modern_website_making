@@ -10,11 +10,15 @@ type Props = {
     params: Promise<{
         slug: string;
     }>;
+    searchParams: Promise<{ 
+      dk?: string;
+     }>;
 };
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params, searchParams }: Props) {
   // ⭐ ここが重要！ paramsをawaitする
   const { slug } = await params;
+  const { dk }= await searchParams;
   
   console.log("取得するslug:", slug);
   
@@ -22,7 +26,7 @@ export default async function Page({ params }: Props) {
   if (!slug) {
     return <div>記事IDが指定されていません</div>;
   }
-  const data = await getNewsDetail(slug).catch(notFound);
+  const data = await getNewsDetail(slug, {draftKey: dk, }).catch(notFound);
   console.log("取得したデータ", data);
 
  /*return <div>{data.title}</div>;*/
