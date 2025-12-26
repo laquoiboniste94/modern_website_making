@@ -32,6 +32,8 @@ export default function SearchField() {
         </form>
     );
 }*/
+"use client";
+
 import { useRouter, useSearchParams } from "next/navigation";
 import styles from '../Searchfield/searchfield.module.css';
 import { Suspense } from "react";
