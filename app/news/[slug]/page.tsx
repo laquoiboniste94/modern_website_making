@@ -15,6 +15,8 @@ type Props = {
      }>;
 };
 
+export const revalidate = 0;
+
 export default async function Page({ params, searchParams }: Props) {
   // ⭐ ここが重要！ paramsをawaitする
   const { slug } = await params;
