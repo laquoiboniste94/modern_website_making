@@ -33,6 +33,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "http://localhost:3300",
   },
+    other: {
+    'google-site-verification': 'OW7lurQID6Igit8fs_8X8luafTlzdrze5X9kL-EUr9g',
+    // 例: 'google-site-verification': 'AbCdEfGhIjKlMnOpQrStUvWxYz1234567890',
+  },
 };
 
 export default function RootLayout({
