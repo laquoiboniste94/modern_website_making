@@ -65,6 +65,34 @@
   font-size: 14px;
   margin-bottom: 8px;
 }
+/* 方法2：ボタン自体を右寄せ */
+.backButton {
+    width: fit-content;
+    padding: 12px 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* 右寄せの魔法 */
+    margin-left: auto;
+    display: block; /* または display: flex; */
+    
+    /* 既存のスタイル */
+    margin-top: 80px;
+    padding-top: 12px; /* padding-top を調整 */
+    border-top: 1px solid var(--color-border);
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* ホバー時の効果 */
+.backButton:hover {
+  background-color: #333; /* 少し明るい黒 */
+  opacity: 0.9;
+}
 
 @media (max-width: 640px) {
   .success {

@@ -1,6 +1,10 @@
 import ContactForm from "../_components/ContactForm/contactform";
 import styles from '../contact/page.module.css';
 
+export const metadata = {
+    title: "お問い合わせページ",
+};
+
 export default function Page() {
     return (
         <div className={styles.container}>

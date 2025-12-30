@@ -3,6 +3,7 @@
 import styles from '../ContactForm/contactform.module.css';
 import { createContactData } from '@/app/_actions/contact';
 import { useFormState } from 'react-dom';
+import Link from 'next/link';
 
 const initalState = {
     status: "",
@@ -16,11 +17,16 @@ export default function ContactForm() {
     console.log(state);
     if(state.status === "success"){
         return (
-            <p className={styles.success}>
-                お問い合わせいただき、ありがとうございます。
+            <div>
+                <p className={styles.success}>
+                    お問い合わせいただき、ありがとうございます。
                 <br />
-                お返事まで今しばらくお待ちください。
-            </p>
+                    お返事まで今しばらくお待ちください。
+                </p>
+                <Link href="/" className={styles.backButton}>
+                トップページに戻る
+                </Link>
+            </div>
         );
     }
     return (
