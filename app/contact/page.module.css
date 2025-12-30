@@ -1,0 +1,10 @@
+.text { /*入力フォームの前にある説明文のスタイル*/
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 640px) {
+  .text {
+    text-align: left;
+  }
+}
