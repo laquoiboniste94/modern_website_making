@@ -96,3 +96,15 @@ export const getCategoryDetail = async (
     });
     return detailData;
 };
+export const getAllNewsList = async() => {
+    const listData = await client.getAllContents<News>({
+        endpoint: "news",  
+    });
+    return listData;
+};
+export const getAllcategoryList = async() => {
+    const listData = await client.getAllContents<NewsCategory>({
+        endpoint: "categories",
+    });
+    return listData;
+};

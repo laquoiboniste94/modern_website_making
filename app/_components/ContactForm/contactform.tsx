@@ -4,6 +4,7 @@ import styles from '../ContactForm/contactform.module.css';
 import { createContactData } from '@/app/_actions/contact';
 import { useFormState } from 'react-dom';
 import Link from 'next/link';
+import { sendGAEvent } from '@next/third-parties/google';
 
 const initalState = {
     status: "",
@@ -15,6 +16,11 @@ export default function ContactForm() {
 
     const [ state, formAction] = useFormState(createContactData, initalState);
     console.log(state);
+
+    const handleSubmit = () => {
+        sendGAEvent({ event: "contact", value: "submit" });
+    }
+
     if(state.status === "success"){
         return (
             <div>
@@ -30,7 +36,8 @@ export default function ContactForm() {
         );
     }
     return (
-        <form className={styles.form} action={formAction}> {/* 問い合わせフォーム全体のレイアウト担当*/}
+        <form className={styles.form} 
+            action={formAction} onSubmit={handleSubmit}> {/* 問い合わせフォーム全体のレイアウト担当*/}
             <div className={styles.horizontal}> {/* 姓と名の２つのフォームのレイアウト担当*/}
                 <div className={styles.item}> {/* 姓のフォームのレイアウト担当*/}
                     <label className={styles.label}> {/* 姓のフォームのスタイル担当*/}
